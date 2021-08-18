@@ -19,7 +19,7 @@ def main():
     """Game main frame."""
     suit_reminder = f"Choose between {spacesuit.keys()}"
     question = ("Welcome aboard of Exebra Space Cruise Ship, you just woke up"
-                " from cryo-stasis\n")
+                " from cryo-stasis \n")
     print(question)
 
     
