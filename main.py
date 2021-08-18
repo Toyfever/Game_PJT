@@ -39,10 +39,11 @@ def main():
         weapon_player = input(weapon_reminder)
 
         if weapon_player in weapon:
-            if (weapon[weapon_player] >= 100):
+            if weapon[weapon_player] >= 100:
                 print(f"Big and deadly! Your attack value raised to {weapon[weapon_player]}")
                 break
-            elif (weapon[weapon_player] <= 40):
+            elif weapon[weapon_player] <= 40:
+
                 print(f"Small but efficient! Your attack value raised to {weapon[weapon_player]}")
                 break
             else:
