@@ -15,44 +15,42 @@ weapon = {
 }
 
 
-
-
 def main():
     """Game main frame."""
-    suitReminder = f"Choose between {spacesuit.keys()}"
+    suit_reminder = f"Choose between {spacesuit.keys()}"
     question = ("Welcome aboard of Exebra Space Cruise Ship, you just woke up"
-                "from cryo-stasis\n")
+                " from cryo-stasis \n")
     print(question)
 
     
     while "spacesuit check loop":
-        spacesuitPlayer = input(suitReminder)
+        spacesuit_player = input(suit_reminder)
 
-        if spacesuitPlayer in spacesuit:
-            print(f"Your armor value is now {spacesuit[spacesuitPlayer]}")
+        if spacesuit_player in spacesuit:
+            print(f"Your armor value is now {spacesuit[spacesuit_player]}")
             break
         else:
-            print(f"This spacesuit doesn't exist! {suitReminder}")
+            print(f"{spacesuit_player} spacesuit doesn't exist!")
 
     print("time to choose your weapon")
-    weaponReminder = f"Pick one of these: {weapon.keys()}"
+    weapon_reminder = f"Pick one of these: {weapon.keys()}"
 
     while "weapon check loop":
-        weaponPlayer = input(weaponReminder)
+        weapon_player = input(weapon_reminder)
 
-        if weaponPlayer in weapon:
-            if (weapon[weaponPlayer] >= 100):
-                print(f"Big and deadly! Your attack value raised to {weapon[weaponPlayer]}")
+        if weapon_player in weapon:
+            if weapon[weapon_player] >= 100:
+                print(f"Big and deadly! Your attack value raised to {weapon[weapon_player]}")
                 break
-            elif (weapon[weaponPlayer] <= 40):
-                print(f"Small but efficient! Your attack value raised to {weapon[weaponPlayer]}")
+            elif weapon[weapon_player] <= 40:
+
+                print(f"Small but efficient! Your attack value raised to {weapon[weapon_player]}")
                 break
             else:
-                print(f"Your attack value raised to {weapon[weaponPlayer]}")
+                print(f"Your attack value raised to {weapon[weapon_player]}")
                 break
 
         else:
-            print(f"this weapon is not on the rack! choose between : {weapon.keys()}")
+            print(f"{weapon_player} is not on the rack! choose between")
 
     print("It seems that you are ready to go!")
-
