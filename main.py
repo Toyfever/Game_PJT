@@ -1,7 +1,7 @@
 from lab import getlist
 
 player_settings = {
-    "HP": 100, "armor": 0, "attack": 0    
+    "HP": 100, "armor": 0, "attack": 0
 }
 
 spacesuit = {
@@ -24,7 +24,6 @@ def main():
                 " from cryo-stasis \n")
     print(question)
 
-    
     while "spacesuit check loop":
         spacesuit_player = input(suit_reminder)
 
@@ -32,7 +31,7 @@ def main():
             print(f"Your armor value is now {spacesuit[spacesuit_player]}")
             break
         else:
-            print(f"{spacesuit_player} spacesuit doesn't exist!")
+            print(f"{spacesuit_player} spacesuit does not exist!")
 
     print("time to choose your weapon")
     weapon_reminder = f"Pick one of these: {getlist(weapon)}\n"
