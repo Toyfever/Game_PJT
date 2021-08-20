@@ -1,3 +1,5 @@
+from lab import getlist
+
 player_settings = {
     "HP": 100, "armor": 0, "attack": 0    
 }
@@ -17,7 +19,7 @@ weapon = {
 
 def main():
     """Game main frame."""
-    suit_reminder = f"Choose between {spacesuit.keys()}"
+    suit_reminder = f"Choose between : {getlist(spacesuit)}\n"
     question = ("Welcome aboard of Exebra Space Cruise Ship, you just woke up"
                 " from cryo-stasis \n")
     print(question)
@@ -33,7 +35,7 @@ def main():
             print(f"{spacesuit_player} spacesuit doesn't exist!")
 
     print("time to choose your weapon")
-    weapon_reminder = f"Pick one of these: {weapon.keys()}"
+    weapon_reminder = f"Pick one of these: {getlist(weapon)}\n"
 
     while "weapon check loop":
         weapon_player = input(weapon_reminder)
