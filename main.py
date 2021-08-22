@@ -1,5 +1,7 @@
+from lab import cleanlist
+
 player_settings = {
-    "HP": 100, "armor": 0, "attack": 0    
+    "HP": 100, "armor": 0, "attack": 0
 }
 
 spacesuit = {
@@ -17,12 +19,11 @@ weapon = {
 
 def main():
     """Game main frame."""
-    suit_reminder = f"Choose between {spacesuit.keys()}"
+    suit_reminder = f"Choose between : {cleanlist(spacesuit)}\n"
     question = ("Welcome aboard of Exebra Space Cruise Ship, you just woke up"
                 " from cryo-stasis \n")
     print(question)
 
-    
     while "spacesuit check loop":
         spacesuit_player = input(suit_reminder)
 
@@ -30,10 +31,10 @@ def main():
             print(f"Your armor value is now {spacesuit[spacesuit_player]}")
             break
         else:
-            print(f"{spacesuit_player} spacesuit doesn't exist!")
+            print(f"{spacesuit_player} spacesuit does not exist!")
 
     print("time to choose your weapon")
-    weapon_reminder = f"Pick one of these: {weapon.keys()}"
+    weapon_reminder = f"Pick one of these: {cleanlist(weapon)}\n"
 
     while "weapon check loop":
         weapon_player = input(weapon_reminder)
