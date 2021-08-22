@@ -1,8 +1,4 @@
 def getlist(dictionary):
-    global list_format
-    base_list = []
-    for i in dictionary.keys():
-        base_list.append(i)
-        list_format = ", ".join(base_list)
+    list_format = ", ".join(dictionary)
 
     return list_format
